@@ -203,24 +203,24 @@ The kinematic wave model is appropriate for steep slopes where gravity and frict
 
 ```{mermaid}
 graph TD
-    A[Shallow Water Equation Simplifications] --> B[Full Dynamic Wave]
-    A --> C[Diffusive Wave]
-    A --> D[Kinematic Wave]
+    A["Shallow Water Equation Simplifications"] --> B["Full Dynamic Wave"]
+    A --> C["Diffusive Wave"]
+    A --> D["Kinematic Wave"]
 
-    B -->|Includes all terms| B1[Local Acceleration]
-    B -->|Includes all terms| B2[Convective Acceleration]
-    B -->|Includes all terms| B3[Pressure Gradient]
-    B -->|Includes all terms| B4[Friction]
+    B -->|"Includes all terms"| B1["Local Acceleration"]
+    B -->|"Includes all terms"| B2["Convective Acceleration"]
+    B -->|"Includes all terms"| B3["Pressure Gradient"]
+    B -->|"Includes all terms"| B4["Friction"]
 
-    C -->|Neglects| C1[Local Acceleration]
-    C -->|Neglects| C2[Convective Acceleration]
-    C -->|Includes| C3[Pressure Gradient]
-    C -->|Includes| C4[Friction]
+    C -->|"Neglects"| C1["Local Acceleration"]
+    C -->|"Neglects"| C2["Convective Acceleration"]
+    C -->|"Includes"| C3["Pressure Gradient"]
+    C -->|"Includes"| C4["Friction"]
 
-    D -->|Neglects| D1[Local Acceleration]
-    D -->|Neglects| D2[Convective Acceleration]
-    D -->|Neglects| D3[Pressure Gradient]
-    D -->|Includes| D4[Friction = Bed Slope]
+    D -->|"Neglects"| D1["Local Acceleration"]
+    D -->|"Neglects"| D2["Convective Acceleration"]
+    D -->|"Neglects"| D3["Pressure Gradient"]
+    D -->|"Includes"| D4["Friction = Bed Slope"]
 ```
 
 ## Dimensionality in Hydrodynamic Models
@@ -278,24 +278,24 @@ This hybrid approach optimizes computational resources while maintaining physica
 
 ```{mermaid}
 graph TD
-    A[Model Dimensionality] --> B[1D Models]
-    A --> C[2D Models]
-    A --> D[Coupled 1D-2D Models]
+    A["Model Dimensionality"] --> B["1D Models"]
+    A --> C["2D Models"]
+    A --> D["Coupled 1D-2D Models"]
 
-    B --> B1[River Channel Focus]
-    B --> B2[Cross-section Based]
-    B --> B3[Computationally Efficient]
-    B --> B4[Limited Floodplain Physics]
+    B --> B1["River Channel Focus"]
+    B --> B2["Cross-section Based"]
+    B --> B3["Computationally Efficient"]
+    B --> B4["Limited Floodplain Physics"]
 
-    C --> C1[Floodplain Focus]
-    C --> C2[Grid or Mesh Based]
-    C --> C3[Computationally Intensive]
-    C --> C4[Detailed Flow Patterns]
+    C --> C1["Floodplain Focus"]
+    C --> C2["Grid or Mesh Based"]
+    C --> C3["Computationally Intensive"]
+    C --> C4["Detailed Flow Patterns"]
 
-    D --> D1[Channel: 1D]
-    D --> D2[Floodplain: 2D]
-    D --> D3[Optimized Approach]
-    D --> D4[Lateral Exchange Links]
+    D --> D1["Channel: 1D"]
+    D --> D2["Floodplain: 2D"]
+    D --> D3["Optimized Approach"]
+    D --> D4["Lateral Exchange Links"]
 ```
 
 ## Numerical Methods for Solving the Equations
@@ -415,18 +415,18 @@ Floodplain flow is predominantly subcritical, but transitions between regimes ca
 
 ```{mermaid}
 graph LR
-    A[Flow Regimes] --> B[Subcritical Flow]
-    A --> C[Critical Flow]
-    A --> D[Supercritical Flow]
+    A["Flow Regimes"] --> B["Subcritical Flow"]
+    A --> C["Critical Flow"]
+    A --> D["Supercritical Flow"]
 
-    B -->|Fr < 1| B1[Tranquil, Deep, Slow]
-    B -->|Fr < 1| B2[Downstream Control]
+    B -->|"Fr < 1"| B1["Tranquil, Deep, Slow"]
+    B -->|"Fr < 1"| B2["Downstream Control"]
 
-    C -->|Fr = 1| C1[Transitional State]
-    C -->|Fr = 1| C2[Minimum Specific Energy]
+    C -->|"Fr = 1"| C1["Transitional State"]
+    C -->|"Fr = 1"| C2["Minimum Specific Energy"]
 
-    D -->|Fr > 1| D1[Rapid, Shallow, Fast]
-    D -->|Fr > 1| D2[Upstream Control]
+    D -->|"Fr > 1"| D1["Rapid, Shallow, Fast"]
+    D -->|"Fr > 1"| D2["Upstream Control"]
 ```
 
 ### Specific Energy and Critical Depth
