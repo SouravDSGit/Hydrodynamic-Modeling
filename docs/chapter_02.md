@@ -1,7 +1,20 @@
+---
+myst:
+  html_meta:
+    title: Fundamentals of Hydrodynamic Modeling
+    description: Core concepts and equations in hydrodynamic modeling
+---
+
+(chapter_02)=
+
 # Chapter 2: Fundamentals of Hydrodynamic Modeling
 
+## Introduction to Hydraulics and Hydrology
+
+Before delving into the complexities of hydrodynamic modeling, it is essential to understand the fundamental distinction between hydraulics and hydrology, as both disciplines form the foundation of floodplain analysis.
+
 ```{mermaid}
-graph LR
+graph TD
     A[Hydrodynamic Modeling] --> B[Physical Principles]
     A --> C[Mathematical Formulations]
     A --> D[Numerical Methods]
@@ -18,10 +31,6 @@ graph LR
     D --> D2[Finite Element]
     D --> D3[Finite Volume]
 ```
-
-## Introduction to Hydraulics and Hydrology
-
-Before delving into the complexities of hydrodynamic modeling, it is essential to understand the fundamental distinction between hydraulics and hydrology, as both disciplines form the foundation of floodplain analysis.
 
 **Hydrology** concerns the study of water movement through the Earth's natural cycle—precipitation, infiltration, runoff, and evaporation. It addresses questions like:
 
@@ -45,7 +54,9 @@ At the heart of hydrodynamic modeling lies the principle of mass conservation, o
 
 For a one-dimensional channel section, the continuity equation can be expressed as:
 
-$$\frac{\partial A}{\partial t} + \frac{\partial Q}{\partial x} = q_l$$
+```{math}
+\frac{\partial A}{\partial t} + \frac{\partial Q}{\partial x} = q_l
+```
 
 Where:
 
@@ -61,7 +72,9 @@ This elegantly simple principle ensures that water is neither created nor destro
 
 The second fundamental principle is the conservation of momentum, which is an application of Newton's second law of motion to fluid flow. The momentum equation accounts for the forces affecting flow velocity and direction:
 
-$$\frac{\partial Q}{\partial t} + \frac{\partial}{\partial x}(\frac{Q^2}{A}) + gA\frac{\partial h}{\partial x} + gAS_f = 0$$
+```{math}
+\frac{\partial Q}{\partial t} + \frac{\partial}{\partial x}\left(\frac{Q^2}{A}\right) + gA\frac{\partial h}{\partial x} + gAS_f = 0
+```
 
 Where:
 
@@ -95,7 +108,9 @@ Understanding these forces is crucial for interpreting model outputs and recogni
 
 While not always explicitly solved in hydrodynamic models, the principle of energy conservation provides valuable insights into flow behavior. The energy equation, derived from Bernoulli's principle, states that the total energy at any point in a fluid system remains constant in the absence of work done by or on the fluid:
 
-$$z + \frac{p}{\rho g} + \frac{v^2}{2g} = \text{constant}$$
+```{math}
+z + \frac{p}{\rho g} + \frac{v^2}{2g} = \text{constant}
+```
 
 Where:
 
@@ -118,13 +133,22 @@ The shallow water equations (SWEs) represent the most common mathematical framew
 For two-dimensional flow, the shallow water equations consist of one continuity equation and two momentum equations:
 
 **Continuity:**
-$$\frac{\partial h}{\partial t} + \frac{\partial (uh)}{\partial x} + \frac{\partial (vh)}{\partial y} = 0$$
+
+```{math}
+\frac{\partial h}{\partial t} + \frac{\partial (uh)}{\partial x} + \frac{\partial (vh)}{\partial y} = 0
+```
 
 **Momentum in x-direction:**
-$$\frac{\partial (uh)}{\partial t} + \frac{\partial}{\partial x}(u^2h + \frac{1}{2}gh^2) + \frac{\partial (uvh)}{\partial y} = gh(S_{0x} - S_{fx})$$
+
+```{math}
+\frac{\partial (uh)}{\partial t} + \frac{\partial}{\partial x}\left(u^2h + \frac{1}{2}gh^2\right) + \frac{\partial (uvh)}{\partial y} = gh(S_{0x} - S_{fx})
+```
 
 **Momentum in y-direction:**
-$$\frac{\partial (vh)}{\partial t} + \frac{\partial (uvh)}{\partial x} + \frac{\partial}{\partial y}(v^2h + \frac{1}{2}gh^2) = gh(S_{0y} - S_{fy})$$
+
+```{math}
+\frac{\partial (vh)}{\partial t} + \frac{\partial (uvh)}{\partial x} + \frac{\partial}{\partial y}\left(v^2h + \frac{1}{2}gh^2\right) = gh(S_{0y} - S_{fy})
+```
 
 Where:
 
@@ -139,7 +163,9 @@ These equations capture the essential physics of flood wave propagation across a
 
 For many practical applications, the full shallow water equations can be simplified by neglecting certain terms in the momentum equations. The diffusive wave approximation omits the local and convective acceleration terms, resulting in:
 
-$$gh\frac{\partial h}{\partial x} = gh(S_0 - S_f)$$
+```{math}
+gh\frac{\partial h}{\partial x} = gh(S_0 - S_f)
+```
 
 This approximation is valid when:
 
@@ -153,11 +179,15 @@ The diffusive model significantly reduces computational demands while maintainin
 
 An even simpler formulation is the kinematic wave approximation, which assumes that the friction slope equals the bed slope:
 
-$$S_f = S_0$$
+```{math}
+S_f = S_0
+```
 
 This leads to a direct relationship between discharge and depth, often expressed using Manning's equation:
 
-$$Q = \frac{1}{n}AR^{2/3}S_0^{1/2}$$
+```{math}
+Q = \frac{1}{n}AR^{2/3}S_0^{1/2}
+```
 
 Where:
 
@@ -194,9 +224,13 @@ graph TD
 
 One-dimensional models represent the river or channel as a sequence of cross-sections, solving the 1D Saint-Venant equations:
 
-$$\frac{\partial A}{\partial t} + \frac{\partial Q}{\partial x} = q_l$$
+```{math}
+\frac{\partial A}{\partial t} + \frac{\partial Q}{\partial x} = q_l
+```
 
-$$\frac{\partial Q}{\partial t} + \frac{\partial}{\partial x}(\frac{Q^2}{A}) + gA\frac{\partial h}{\partial x} + gAS_f = 0$$
+```{math}
+\frac{\partial Q}{\partial t} + \frac{\partial}{\partial x}\left(\frac{Q^2}{A}\right) + gA\frac{\partial h}{\partial x} + gAS_f = 0
+```
 
 Advantages of 1D models include:
 
@@ -267,7 +301,9 @@ The differential equations governing flow cannot be solved analytically for real
 
 The finite difference method approximates derivatives using differences between values at discrete points:
 
-$$\frac{\partial h}{\partial x} \approx \frac{h_{i+1} - h_i}{\Delta x}$$
+```{math}
+\frac{\partial h}{\partial x} \approx \frac{h_{i+1} - h_i}{\Delta x}
+```
 
 This method is:
 
@@ -280,7 +316,9 @@ This method is:
 
 The finite volume method divides the domain into control volumes and enforces conservation principles directly:
 
-$$\frac{\partial}{\partial t}\int_V U dV + \oint_S F \cdot n dS = \int_V S dV$$
+```{math}
+\frac{\partial}{\partial t}\int_V U dV + \oint_S F \cdot n dS = \int_V S dV
+```
 
 Where:
 
@@ -298,7 +336,9 @@ This method:
 
 The finite element method approximates the solution using piecewise functions on a mesh of elements:
 
-$$u(x,y) \approx \sum_{i=1}^n N_i(x,y)u_i$$
+```{math}
+u(x,y) \approx \sum_{i=1}^n N_i(x,y)u_i
+```
 
 Where:
 
@@ -315,7 +355,9 @@ This method:
 
 In hydrodynamic modeling, flow resistance represents the energy loss due to friction between water and boundaries. The most common formulation is Manning's equation:
 
-$$V = \frac{1}{n}R^{2/3}S^{1/2}$$
+```{math}
+V = \frac{1}{n}R^{2/3}S^{1/2}
+```
 
 Where:
 
@@ -348,7 +390,9 @@ Proper estimation of roughness values is essential for model accuracy, often req
 
 The Froude number ($Fr$) is a dimensionless parameter that characterizes flow regimes:
 
-$$Fr = \frac{V}{\sqrt{gD}}$$
+```{math}
+Fr = \frac{V}{\sqrt{gD}}
+```
 
 Where:
 
@@ -384,7 +428,9 @@ graph LR
 
 Specific energy ($E$) is the energy per unit weight of water relative to the channel bottom:
 
-$$E = y + \frac{V^2}{2g}$$
+```{math}
+E = y + \frac{V^2}{2g}
+```
 
 Where:
 
@@ -416,7 +462,7 @@ Choose model dimensionality and complexity based on:
 
 Ensure model stability by:
 
-- Respecting the Courant-Friedrichs-Lewy (CFL) condition: $C = \frac{V\Delta t}{\Delta x} \leq 1$
+- Respecting the Courant-Friedrichs-Lewy (CFL) condition: `{math}C = \frac{V\Delta t}{\Delta x} \leq 1`
 - Using appropriate time steps and spatial discretization
 - Implementing suitable numerical schemes for your flow conditions
 - Carefully handling wetting and drying processes at floodplain edges
@@ -468,13 +514,13 @@ The selection of appropriate model dimensionality and complexity involves balanc
 
 ## Key Equations
 
-| Equation                                                                                                                   | Name               | Application                             |
-| -------------------------------------------------------------------------------------------------------------------------- | ------------------ | --------------------------------------- |
-| $\frac{\partial A}{\partial t} + \frac{\partial Q}{\partial x} = q_l$                                                      | 1D Continuity      | Conservation of mass in channel flow    |
-| $\frac{\partial h}{\partial t} + \frac{\partial (uh)}{\partial x} + \frac{\partial (vh)}{\partial y} = 0$                  | 2D Continuity      | Conservation of mass in floodplain flow |
-| $\frac{\partial Q}{\partial t} + \frac{\partial}{\partial x}(\frac{Q^2}{A}) + gA\frac{\partial h}{\partial x} + gAS_f = 0$ | 1D Momentum        | Force balance in channel flow           |
-| $V = \frac{1}{n}R^{2/3}S^{1/2}$                                                                                            | Manning's Equation | Flow resistance relationship            |
-| $Fr = \frac{V}{\sqrt{gD}}$                                                                                                 | Froude Number      | Flow regime classification              |
+| Equation                                                                                                                                    | Name               | Application                             |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | --------------------------------------- |
+| `{math}\frac{\partial A}{\partial t} + \frac{\partial Q}{\partial x} = q_l`                                                                 | 1D Continuity      | Conservation of mass in channel flow    |
+| `{math}\frac{\partial h}{\partial t} + \frac{\partial (uh)}{\partial x} + \frac{\partial (vh)}{\partial y} = 0`                             | 2D Continuity      | Conservation of mass in floodplain flow |
+| `{math}\frac{\partial Q}{\partial t} + \frac{\partial}{\partial x}\left(\frac{Q^2}{A}\right) + gA\frac{\partial h}{\partial x} + gAS_f = 0` | 1D Momentum        | Force balance in channel flow           |
+| `{math}V = \frac{1}{n}R^{2/3}S^{1/2}`                                                                                                       | Manning's Equation | Flow resistance relationship            |
+| `{math}Fr = \frac{V}{\sqrt{gD}}`                                                                                                            | Froude Number      | Flow regime classification              |
 
 ## Discussion Questions
 
