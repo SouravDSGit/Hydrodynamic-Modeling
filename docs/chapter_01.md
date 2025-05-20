@@ -127,7 +127,7 @@ Hydrodynamic models have emerged as powerful tools for understanding and predict
 ## Types of Hydrodynamic Models
 
 ```{mermaid}
-graph TD
+graph LR
     A[Hydrodynamic Model Types] --> B[1D Models]
     A --> C[2D Models]
     A --> D[Coupled 1D-2D Models]
@@ -161,7 +161,7 @@ The selection of an appropriate model depends on the specific objectives, availa
 ## Challenges in Floodplain Modeling
 
 ```{mermaid}
-graph LR
+graph TD
     A[Floodplain Modeling Challenges] --> B[Data Limitations]
     A --> C[Computational Demands]
     A --> D[Uncertainty]
