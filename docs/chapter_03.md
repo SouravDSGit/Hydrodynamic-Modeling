@@ -11,7 +11,7 @@ Floodplain models, like LISFLOOD-FP discussed in {ref}`Chapter 5: LISFLOOD-FP <c
 
 Floodplain models simulate water movement based on the landscape, water inputs, and surface conditions. Without good data, models can produce inaccurate results, leading to poor flood predictions. This chapter covers the main data types—Digital Elevation Models (DEMs), boundary conditions, Manning’s roughness, channel geometry, and initial conditions—and explains how to prepare them for tools like LISFLOOD-FP or MIKE 21 (see {ref}`Chapter 6: Two-Dimensional (2D) Hydrodynamic Models <chapter_06>`).
 
-```mermaid
+```{mermaid}
 graph TD
     A[Floodplain Model] --> B[Data Inputs]
     B --> C[Digital Elevation Model (DEM)]
@@ -31,6 +31,7 @@ graph TD
 Below are the five main data types needed for floodplain modeling, explained in simple terms.
 
 ### Digital Elevation Model (DEM)
+
 - **What It Is**: A DEM is a digital map showing the height (elevation) of the land at each point, usually in a grid format.
 - **Why It Matters**: The terrain’s shape determines where water flows. Small errors in elevation can lead to big mistakes in flood predictions.
 - **Sources**:
@@ -44,6 +45,7 @@ Below are the five main data types needed for floodplain modeling, explained in 
 - **Example**: For a 10 km² catchment, a 10m LiDAR DEM provides detailed elevation data for accurate flood mapping.
 
 ### Boundary Conditions
+
 - **What It Is**: Data on water entering or leaving the model area, such as river flow (hydrograph) or water levels at the edges.
 - **Why It Matters**: Tells the model how much water is coming in, driving the flood simulation.
 - **Sources**:
@@ -62,6 +64,7 @@ Below are the five main data types needed for floodplain modeling, explained in 
 - **Example**: A hydrograph for a 100-year flood might peak at 100 m³/s after 2 hours.
 
 ### Manning’s Roughness
+
 - **What It Is**: A number that measures how much a surface (e.g., grass, pavement) slows down water flow. Lower values mean smoother surfaces.
 - **Why It Matters**: Affects how fast water moves and spreads. Incorrect values can skew flood extent and depth.
 - **Sources**:
@@ -73,14 +76,15 @@ Below are the five main data types needed for floodplain modeling, explained in 
   - Validate values during calibration (see {ref}`Chapter 8: Calibration and Validation of Flood Models <chapter_08>`).
 - **Example**: A grassland floodplain might use a Manning’s value of 0.035.
 
-| Surface Type       | Manning’s Roughness |
-|--------------------|---------------------|
-| Pavement           | 0.02–0.03          |
-| Grassland          | 0.03–0.04          |
-| Forest             | 0.05–0.1           |
-| Dense Vegetation   | 0.1–0.15           |
+| Surface Type     | Manning’s Roughness |
+| ---------------- | ------------------- |
+| Pavement         | 0.02–0.03           |
+| Grassland        | 0.03–0.04           |
+| Forest           | 0.05–0.1            |
+| Dense Vegetation | 0.1–0.15            |
 
 ### Channel Geometry
+
 - **What It Is**: Data on the shape of rivers or channels, including width, depth, and bank elevations.
 - **Why It Matters**: Critical for models like LISFLOOD-FP when rivers are narrower than the grid size (see {ref}`Chapter 5 <chapter_05>`).
 - **Sources**:
@@ -93,6 +97,7 @@ Below are the five main data types needed for floodplain modeling, explained in 
 - **Example**: A small river might have a width of 10m and depth of 2m.
 
 ### Initial Conditions
+
 - **What It Is**: The starting water depth or flow in the model area before the simulation begins.
 - **Why It Matters**: Sets the baseline for the flood event. Often zero for dry floodplains.
 - **Sources**:
@@ -108,6 +113,7 @@ Below are the five main data types needed for floodplain modeling, explained in 
 Preparing data correctly is crucial for accurate modeling. Here’s a step-by-step guide for a small project (e.g., a 10 km² catchment).
 
 1. **Collect Data**:
+
    - Download a DEM (e.g., 10m LiDAR from Copernicus).
    - Obtain a hydrograph from a gauging station or hydrological model.
    - Use land cover maps to assign Manning’s roughness.
@@ -115,6 +121,7 @@ Preparing data correctly is crucial for accurate modeling. Here’s a step-by-st
    - Set initial conditions (e.g., zero depth for a dry start).
 
 2. **Process in GIS**:
+
    - Use QGIS or ArcGIS to:
      - Clip the DEM to your study area.
      - Create a roughness raster based on land cover.
@@ -122,6 +129,7 @@ Preparing data correctly is crucial for accurate modeling. Here’s a step-by-st
    - Convert data to compatible formats (e.g., ASCII for LISFLOOD-FP).
 
 3. **Format for the Model**:
+
    - Save the DEM as `dem.asc`.
    - Create a boundary condition file (e.g., `inflow.bdy`) with time and discharge.
    - Save roughness as `manning.asc` or a single value in the `.par` file.
@@ -132,7 +140,7 @@ Preparing data correctly is crucial for accurate modeling. Here’s a step-by-st
    - Ensure hydrograph time steps align with the model’s time scale.
    - Verify roughness values match land cover types.
 
-```mermaid
+```{mermaid}
 graph TD
     A[Start] --> B[Collect DEM, Hydrograph, Roughness]
     B --> C[Process in QGIS/ArcGIS]
@@ -145,17 +153,18 @@ graph TD
 ## Common Data Challenges
 
 Students often face these issues when preparing data:
+
 - **Low-Quality DEMs**: Coarse resolution (e.g., 90m SRTM) misses small features. Solution: Use LiDAR or interpolate to improve resolution.
 - **Missing Data**: Gaps in DEMs or hydrographs. Solution: Fill gaps with interpolation or use synthetic data (e.g., design storms).
 - **Incorrect Roughness**: Wrong Manning’s values lead to inaccurate flow. Solution: Use literature values and calibrate (see {ref}`Chapter 8 <chapter_08>`).
 - **Data Format Errors**: Models may reject incompatible files. Solution: Check the model’s user manual (e.g., LISFLOOD-FP requires ASCII grids).
 
-| Challenge             | Solution                          |
-|----------------------|-----------------------------------|
-| Low-Quality DEM      | Use LiDAR or interpolate data    |
-| Missing Data         | Fill gaps or use synthetic data  |
-| Incorrect Roughness  | Use standard values, calibrate   |
-| Format Errors        | Check model manual for formats   |
+| Challenge           | Solution                        |
+| ------------------- | ------------------------------- |
+| Low-Quality DEM     | Use LiDAR or interpolate data   |
+| Missing Data        | Fill gaps or use synthetic data |
+| Incorrect Roughness | Use standard values, calibrate  |
+| Format Errors       | Check model manual for formats  |
 
 ## Tools for Data Preparation
 
