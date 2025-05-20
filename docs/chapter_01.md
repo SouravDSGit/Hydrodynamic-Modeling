@@ -57,23 +57,23 @@ While flooding is a natural process, modern flood events can cause:
 ## The Evolution of Flood Management Approaches
 
 ```{mermaid}
-grpah LR
-    A[Flood Management Evolution] --> B[Traditional Structural Approaches]
-    A --> C[Non-structural Approaches]
-    A --> D[Integrated Flood Management]
-    A --> E[Adaptive Management]
+graph LR
+    A["Flood Management Evolution"] --> B["Traditional Structural Approaches"]
+    A --> C["Non-structural Approaches"]
+    A --> D["Integrated Flood Management"]
+    A --> E["Adaptive Management"]
 
-    B -->|Examples| B1[Levees, Dams, Channels]
-    C -->|Examples| C1[Zoning, Warning Systems, Insurance]
+    B -->|Examples| B1["Levees, Dams, Channels"]
+    C -->|Examples| C1["Zoning, Warning Systems, Insurance"]
     D -->|Combines| D1["Structural + Non-structural + Ecosystem-based"]
     E -->|Features| E1[Flexible & Adjustable Strategies]
 
-    B1 -->|Focus| F1[Control Water]
-    C1 -->|Focus| F2[Adapt to Flooding]
+    B1 -->|Focus| F1["Control Water"]
+    C1 -->|Focus| F2["Adapt to Flooding"]
     D1 -->|Focus| F3["Balance Protection & Adaptation"]
-    E1 -->|Focus| F4[Respond to Changing Conditions]
+    E1 -->|Focus| F4["Respond to Changing Conditions"]
 
-    F1 --> G[Time]
+    F1 --> G["Time"]
     F2 --> G
     F3 --> G
     F4 --> G

@@ -15,7 +15,7 @@ myst:
 ```
 
 ```{mermaid}
-graph TD
+graph LR
     A["1D Hydrodynamic Models"] --> B["Key Concepts"]
     A --> C["Popular Software"]
     A --> D["Applications"]
@@ -56,7 +56,7 @@ This chapter explores the fundamental concepts, mathematical formulations, pract
 - Roughness characteristics
 
 ```{mermaid}
-graph TD
+graph LR
     A["River Representation in 1D Model"] --> B["River Centerline"]
     A --> C["Cross-Sections"]
     A --> D["Hydraulic Structures"]
@@ -151,7 +151,7 @@ For certain applications, simplified versions of the Saint-Venant equations prov
    - Cannot represent backwater effects
 
 ```{mermaid}
-graph TD
+graph LR
     A["Saint-Venant Equation Variants"] --> B["Full Dynamic Wave"]
     A --> C["Diffusive Wave"]
     A --> D["Kinematic Wave"]
@@ -285,7 +285,7 @@ These applications leverage the computational efficiency of 1D approaches to sim
 - Urban environments with complex flow paths
 
 ```{mermaid}
-graph TD
+graph LR
     A["1D Model Limitations"] --> B["Geometric Constraints"]
     A --> C["Flow Assumptions"]
     A --> D["Floodplain Representation"]
