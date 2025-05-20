@@ -66,7 +66,7 @@ graph LR
     B -->|Examples| B1["Levees, Dams, Channels"]
     C -->|Examples| C1["Zoning, Warning Systems, Insurance"]
     D -->|Combines| D1["Structural + Non-structural + Ecosystem-based"]
-    E -->|Features| E1[Flexible & Adjustable Strategies]
+    E -->|Features| E1["Flexible & Adjustable Strategies"]
 
     B1 -->|Focus| F1["Control Water"]
     C1 -->|Focus| F2["Adapt to Flooding"]
@@ -77,6 +77,7 @@ graph LR
     F2 --> G
     F3 --> G
     F4 --> G
+
 ```
 
 Flood management strategies have evolved significantly over time:
