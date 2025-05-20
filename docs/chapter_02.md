@@ -519,13 +519,34 @@ The selection of appropriate model dimensionality and complexity involves balanc
 
 ## Key Equations
 
-| Equation                                                                                                                                    | Name               | Application                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | --------------------------------------- |
-| `{math}\frac{\partial A}{\partial t} + \frac{\partial Q}{\partial x} = q_l`                                                                 | 1D Continuity      | Conservation of mass in channel flow    |
-| `{math}\frac{\partial h}{\partial t} + \frac{\partial (uh)}{\partial x} + \frac{\partial (vh)}{\partial y} = 0`                             | 2D Continuity      | Conservation of mass in floodplain flow |
-| `{math}\frac{\partial Q}{\partial t} + \frac{\partial}{\partial x}\left(\frac{Q^2}{A}\right) + gA\frac{\partial h}{\partial x} + gAS_f = 0` | 1D Momentum        | Force balance in channel flow           |
-| `{math}V = \frac{1}{n}R^{2/3}S^{1/2}`                                                                                                       | Manning's Equation | Flow resistance relationship            |
-| `{math}Fr = \frac{V}{\sqrt{gD}}`                                                                                                            | Froude Number      | Flow regime classification              |
+1. **1D Continuity Equation**: Conservation of mass in channel flow
+
+   ```{math}
+   \frac{\partial A}{\partial t} + \frac{\partial Q}{\partial x} = q_l
+   ```
+
+2. **2D Continuity Equation**: Conservation of mass in floodplain flow
+
+   ```{math}
+   \frac{\partial h}{\partial t} + \frac{\partial (uh)}{\partial x} + \frac{\partial (vh)}{\partial y} = 0
+   ```
+
+3. **1D Momentum Equation**: Force balance in channel flow
+
+   ```{math}
+   \frac{\partial Q}{\partial t} + \frac{\partial}{\partial x}\left(\frac{Q^2}{A}\right) + gA\frac{\partial h}{\partial x} + gAS_f = 0
+   ```
+
+4. **Manning's Equation**: Flow resistance relationship
+
+   ```{math}
+   V = \frac{1}{n}R^{2/3}S^{1/2}
+   ```
+
+5. **Froude Number**: Flow regime classification
+   ```{math}
+   Fr = \frac{V}{\sqrt{gD}}
+   ```
 
 ## Discussion Questions
 
