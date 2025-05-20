@@ -15,7 +15,7 @@ myst:
 ```
 
 ```{mermaid}
-graph TD
+graph LR
     A[Hydrodynamic Modeling] --> B[Physical Principles]
     A --> C[Mathematical Formulations]
     A --> D[Numerical Methods]
@@ -202,7 +202,7 @@ Where:
 The kinematic wave model is appropriate for steep slopes where gravity and friction dominate the flow dynamics, but it cannot capture backwater effects or flow reversal—key phenomena in flat floodplains.
 
 ```{mermaid}
-graph TD
+graph LR
     A["Shallow Water Equation Simplifications"] --> B["Full Dynamic Wave"]
     A --> C["Diffusive Wave"]
     A --> D["Kinematic Wave"]
@@ -277,7 +277,7 @@ Coupled models leverage the strengths of both approaches by using:
 This hybrid approach optimizes computational resources while maintaining physical realism where it matters most.
 
 ```{mermaid}
-graph TD
+graph LR
     A["Model Dimensionality"] --> B["1D Models"]
     A --> C["2D Models"]
     A --> D["Coupled 1D-2D Models"]
