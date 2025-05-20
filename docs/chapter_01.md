@@ -1,5 +1,10 @@
 # Chapter 1: Introduction to Floodplain Modeling
 
+```{contents}
+:depth: 2
+:local:
+```
+
 ```{mermaid}
 graph TD
     A[Climate Change] -->|Intensifies| B[Extreme Weather Events]

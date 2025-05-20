@@ -9,7 +9,7 @@ Floods can devastate communities, infrastructure, and ecosystems. To predict and
 
 ## What is LISFLOOD-FP?
 
-LISFLOOD-FP is a two-dimensional (2D) hydrodynamic model developed by the University of Bristol. It simulates water movement over landscapes like floodplains or cities during floods, producing maps of flood extent, depth, and velocity. For more on hydrodynamic modeling basics, see {ref}`Chapter 2: Fundamentals of Hydrodynamic Modeling <chapter_02>`.
+LISFLOOD-FP is a two-dimensional (2D) hydrodynamic model developed by the University of Bristol. It simulates water movement over landscapes like floodplains or cities during floods, producing maps of flood extent, depth, and velocity. For more on hydrodynamic modeling basics, see {ref}`Chapter 2 - Fundamentals of Hydrodynamic Modeling <chapter_02>`.
 
 ### Purpose and Applications
 

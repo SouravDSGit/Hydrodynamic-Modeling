@@ -1,13 +1,18 @@
 ---
 myst:
   html_meta:
-    title: Fundamentals of Hydrodynamic Modeling
+    title: Chapter 2 - Fundamentals of Hydrodynamic Modeling
     description: Core concepts and equations in hydrodynamic modeling
 ---
 
 (chapter_02)=
 
 # Chapter 2: Fundamentals of Hydrodynamic Modeling
+
+```{contents}
+:depth: 2
+:local:
+```
 
 ## Introduction to Hydraulics and Hydrology
 
