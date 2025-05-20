@@ -12,7 +12,7 @@ Floodplain models, like LISFLOOD-FP discussed in {ref}`Chapter 5: LISFLOOD-FP <c
 Floodplain models simulate water movement based on the landscape, water inputs, and surface conditions. Without good data, models can produce inaccurate results, leading to poor flood predictions. This chapter covers the main data types—Digital Elevation Models (DEMs), boundary conditions, Manning’s roughness, channel geometry, and initial conditions—and explains how to prepare them for tools like LISFLOOD-FP or MIKE 21 (see {ref}`Chapter 6: Two-Dimensional (2D) Hydrodynamic Models <chapter_06>`).
 
 ```{mermaid}
-graph TD
+graph LR
     A[Floodplain Model] --> B[Data Inputs]
     B --> C[Digital Elevation Model&#40;DEM&#41;]
     B --> D[Boundary Conditions]
@@ -141,7 +141,7 @@ Preparing data correctly is crucial for accurate modeling. Here’s a step-by-st
    - Verify roughness values match land cover types.
 
 ```{mermaid}
-graph TD
+graph LR
     A[Start] --> B[Collect DEM, Hydrograph, Roughness]
     B --> C[Process in QGIS/ArcGIS]
     C --> D[Clip DEM, Create Rasters]
