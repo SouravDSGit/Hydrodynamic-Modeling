@@ -101,16 +101,16 @@ LISFLOOD-FP takes input data, calculates water flow, and produces flood maps. He
 ### Flow Diagram of the Process
 
 ```{mermaid}
-    graph TD
-        A[Start] --> B[Collect DEM, Hydrograph, Roughness]
-        B --> C[Create Configuration File (.par)]
-        C --> D[Choose Solver: Inertial, Diffusive, etc.]
-        D --> E[Run LISFLOOD-FP]
-        E --> F[Generate Outputs: Depth, Velocity Maps]
-        F --> G[Visualize in QGIS or Python]
-        G --> H[Validate with Real Data]
-        H --> I[Adjust Parameters if Needed]
-        I --> E
+graph TD
+    A[Start] --> B[Collect DEM, Hydrograph, Roughness]
+    B --> C[Create Configuration File (.par)]
+    C --> D[Choose Solver: Inertial, Diffusive, etc.]
+    D --> E[Run LISFLOOD-FP]
+    E --> F[Generate Outputs: Depth, Velocity Maps]
+    F --> G[Visualize in QGIS or Python]
+    G --> H[Validate with Real Data]
+    H --> I[Adjust Parameters if Needed]
+    I --> E
 ```
 
 ## Setting Up a Small Project
