@@ -14,12 +14,8 @@ myst:
 :local:
 ```
 
-## Introduction to Hydraulics and Hydrology
-
-Before delving into the complexities of hydrodynamic modeling, it is essential to understand the fundamental distinction between hydraulics and hydrology, as both disciplines form the foundation of floodplain analysis.
-
 ```{mermaid}
-graph LR
+graph TD
     A[Hydrodynamic Modeling] --> B[Physical Principles]
     A --> C[Mathematical Formulations]
     A --> D[Numerical Methods]
@@ -36,6 +32,10 @@ graph LR
     D --> D2[Finite Element]
     D --> D3[Finite Volume]
 ```
+
+## Introduction to Hydraulics and Hydrology
+
+Before delving into the complexities of hydrodynamic modeling, it is essential to understand the fundamental distinction between hydraulics and hydrology, as both disciplines form the foundation of floodplain analysis.
 
 **Hydrology** concerns the study of water movement through the Earth's natural cycle—precipitation, infiltration, runoff, and evaporation. It addresses questions like:
 
@@ -65,11 +65,11 @@ For a one-dimensional channel section, the continuity equation can be expressed 
 
 Where:
 
-- $A$ is the cross-sectional area of flow
-- $t$ is time
-- $Q$ is discharge
-- $x$ is distance along the channel
-- $q_l$ is lateral inflow or outflow per unit length
+- `A` is the cross-sectional area of flow
+- `t` is time
+- `Q` is discharge
+- `x` is distance along the channel
+- `q_l` is lateral inflow or outflow per unit length
 
 This elegantly simple principle ensures that water is neither created nor destroyed within our model domain.
 
@@ -83,9 +83,9 @@ The second fundamental principle is the conservation of momentum, which is an ap
 
 Where:
 
-- $g$ is gravitational acceleration
-- $h$ is water surface elevation
-- $S_f$ is the friction slope
+- `g` is gravitational acceleration
+- `h` is water surface elevation
+- `S_f` is the friction slope
 
 This equation balances four terms:
 
@@ -119,9 +119,9 @@ z + \frac{p}{\rho g} + \frac{v^2}{2g} = \text{constant}
 
 Where:
 
-- $z$ is elevation head
-- $\frac{p}{\rho g}$ is pressure head
-- $\frac{v^2}{2g}$ is velocity head
+- `z` is elevation head
+- `p/(ρg)` is pressure head
+- `v²/(2g)` is velocity head
 
 This principle helps us understand transitions between subcritical and supercritical flow regimes, energy losses at hydraulic structures, and the formation of hydraulic jumps—all critical phenomena in flood modeling.
 
@@ -157,10 +157,10 @@ For two-dimensional flow, the shallow water equations consist of one continuity 
 
 Where:
 
-- $h$ is water depth
-- $u$ and $v$ are velocity components in x and y directions
-- $S_{0x}$ and $S_{0y}$ are bed slopes
-- $S_{fx}$ and $S_{fy}$ are friction slopes
+- `h` is water depth
+- `u` and `v` are velocity components in x and y directions
+- `S_{0x}` and `S_{0y}` are bed slopes
+- `S_{fx}` and `S_{fy}` are friction slopes
 
 These equations capture the essential physics of flood wave propagation across a floodplain.
 
@@ -196,8 +196,8 @@ Q = \frac{1}{n}AR^{2/3}S_0^{1/2}
 
 Where:
 
-- $n$ is Manning's roughness coefficient
-- $R$ is hydraulic radius
+- `n` is Manning's roughness coefficient
+- `R` is hydraulic radius
 
 The kinematic wave model is appropriate for steep slopes where gravity and friction dominate the flow dynamics, but it cannot capture backwater effects or flow reversal—key phenomena in flat floodplains.
 
@@ -393,7 +393,7 @@ Proper estimation of roughness values is essential for model accuracy, often req
 
 ### Froude Number and Flow Regimes
 
-The Froude number ($Fr$) is a dimensionless parameter that characterizes flow regimes:
+The Froude number (`Fr`) is a dimensionless parameter that characterizes flow regimes:
 
 ```{math}
 Fr = \frac{V}{\sqrt{gD}}
@@ -401,9 +401,9 @@ Fr = \frac{V}{\sqrt{gD}}
 
 Where:
 
-- $V$ is flow velocity
-- $g$ is gravitational acceleration
-- $D$ is hydraulic depth
+- `V` is flow velocity
+- `g` is gravitational acceleration
+- `D` is hydraulic depth
 
 This ratio represents the relative importance of inertial forces to gravitational forces, leading to three flow regimes:
 
@@ -431,7 +431,7 @@ graph LR
 
 ### Specific Energy and Critical Depth
 
-Specific energy ($E$) is the energy per unit weight of water relative to the channel bottom:
+Specific energy (`E`) is the energy per unit weight of water relative to the channel bottom:
 
 ```{math}
 E = y + \frac{V^2}{2g}
@@ -439,15 +439,15 @@ E = y + \frac{V^2}{2g}
 
 Where:
 
-- $y$ is flow depth
-- $V$ is flow velocity
+- `y` is flow depth
+- `V` is flow velocity
 
 For a given specific energy, there exist two possible depths:
 
 - A subcritical (deeper) depth
 - A supercritical (shallower) depth
 
-The minimum specific energy occurs at critical depth, where $Fr = 1$. This concept is fundamental for understanding flow transitions at hydraulic controls and is crucial for numerically stable models.
+The minimum specific energy occurs at critical depth, where `Fr = 1`. This concept is fundamental for understanding flow transitions at hydraulic controls and is crucial for numerically stable models.
 
 ## Practical Implications for Modeling
 
