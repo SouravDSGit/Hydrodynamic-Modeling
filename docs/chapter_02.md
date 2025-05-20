@@ -14,7 +14,7 @@ myst:
 Before delving into the complexities of hydrodynamic modeling, it is essential to understand the fundamental distinction between hydraulics and hydrology, as both disciplines form the foundation of floodplain analysis.
 
 ```{mermaid}
-graph TD
+graph LR
     A[Hydrodynamic Modeling] --> B[Physical Principles]
     A --> C[Mathematical Formulations]
     A --> D[Numerical Methods]
