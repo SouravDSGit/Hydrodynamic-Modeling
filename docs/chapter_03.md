@@ -14,9 +14,9 @@ Floodplain models simulate water movement based on the landscape, water inputs, 
 ```{mermaid}
 graph TD
     A[Floodplain Model] --> B[Data Inputs]
-    B --> C[Digital Elevation Model (DEM)]
+    B --> C[Digital Elevation Model&#40;DEM&#41;]
     B --> D[Boundary Conditions]
-    B --> E[Manning’s Roughness]
+    B --> E[Manning's Roughness]
     B --> F[Channel Geometry]
     B --> G[Initial Conditions]
     C --> H[Accurate Flood Predictions]
@@ -147,7 +147,7 @@ graph TD
     C --> D[Clip DEM, Create Rasters]
     D --> E[Format for Model: ASCII, Text Files]
     E --> F[Validate Data Quality]
-    F --> G[Run Model (e.g., LISFLOOD-FP)]
+    F --> G[Run Model &#40;e.g., LISFLOOD-FP&#41;]
 ```
 
 ## Common Data Challenges
