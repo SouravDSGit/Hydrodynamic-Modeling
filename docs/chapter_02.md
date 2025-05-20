@@ -101,10 +101,11 @@ graph LR
     A --> D[Pressure Gradient Force]
     A --> E[Friction Force]
 
-    B -->|Temporal velocity changes| B1[∂Q/∂t]
-    C -->|Spatial velocity changes| C1[∂(Q²/A)/∂x]
-    D -->|Water surface slope| D1[gA∂h/∂x]
-    E -->|Boundary resistance| E1[gASf]
+    B -->|"Temporal velocity changes"| B1["dQ/dt"]
+    C -->|"Spatial velocity changes"| C1["d(Q^2/A)/dx"]
+    D -->|"Water surface slope"| D1["gA dh/dx"]
+    E -->|"Boundary resistance"| E1["gA Sf"]
+
 ```
 
 Understanding these forces is crucial for interpreting model outputs and recognizing when different terms dominate under various flow conditions.
