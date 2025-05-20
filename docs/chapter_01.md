@@ -161,7 +161,7 @@ The selection of an appropriate model depends on the specific objectives, availa
 ## Challenges in Floodplain Modeling
 
 ```{mermaid}
-graph TD
+graph LR
     A[Floodplain Modeling Challenges] --> B[Data Limitations]
     A --> C[Computational Demands]
     A --> D[Uncertainty]
