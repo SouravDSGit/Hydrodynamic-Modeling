@@ -141,7 +141,7 @@ Preparing data correctly is crucial for accurate modeling. Here’s a step-by-st
    - Verify roughness values match land cover types.
 
 ```{mermaid}
-graph LR
+graph TD
     A[Start] --> B[Collect DEM, Hydrograph, Roughness]
     B --> C[Process in QGIS/ArcGIS]
     C --> D[Clip DEM, Create Rasters]
