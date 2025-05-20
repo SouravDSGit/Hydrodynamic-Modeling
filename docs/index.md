@@ -10,6 +10,7 @@ This book progresses from foundational concepts to advanced techniques, includin
 :maxdepth: 2
 :caption: Contents
 
+index
 chapter_01
 chapter_02
 chapter_03
