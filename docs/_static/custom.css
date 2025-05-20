@@ -1,0 +1,28 @@
+/* Custom styles for your documentation */
+
+/* Improve code block styling */
+.highlight {
+  background-color: #f8f9fa !important;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  margin: 1em 0;
+}
+
+/* Style admonitions */
+.admonition {
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Customize table of contents */
+.bd-toc .nav-link {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* Add custom colors for mermaid diagrams */
+.mermaid .node rect {
+  fill: #f9f9f9;
+  stroke: #333;
+  stroke-width: 2px;
+}
