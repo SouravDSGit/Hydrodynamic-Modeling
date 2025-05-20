@@ -1,7 +1,7 @@
 # Chapter 2: Fundamentals of Hydrodynamic Modeling
 
 ```{mermaid}
-graph TD
+graph LR
     A[Hydrodynamic Modeling] --> B[Physical Principles]
     A --> C[Mathematical Formulations]
     A --> D[Numerical Methods]
