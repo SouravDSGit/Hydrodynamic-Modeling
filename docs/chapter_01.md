@@ -52,7 +52,7 @@ While flooding is a natural process, modern flood events can cause:
 ## The Evolution of Flood Management Approaches
 
 ```{mermaid}
-grpah TD
+grpah LR
     A[Flood Management Evolution] --> B[Traditional Structural Approaches]
     A --> C[Non-structural Approaches]
     A --> D[Integrated Flood Management]
