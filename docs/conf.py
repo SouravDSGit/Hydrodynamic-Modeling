@@ -5,6 +5,8 @@ project = 'Hydrodynamic Modeling'
 copyright = '2025, Sourav Mukherjee'
 author = 'Sourav Mukherjee, Earth Scientist'
 release = '1.0.0'
+extensions = ['myst_parser', 'sphinxcontrib-mermaid']
+html_theme = 'alabaster'  # Or your preferred theme
 
 # -- General configuration ---------------------------------------------------
 extensions = [
@@ -31,7 +33,7 @@ myst_enable_extensions = [
 myst_heading_anchors = 3  # Generate anchors for h1-h3
 
 # -- Options for HTML output -------------------------------------------------
-html_theme = 'sphinx_book_theme'
+# html_theme = 'sphinx_book_theme'
 
 html_theme_options = {
     'repository_url': 'https://github.com/SouravDSGit/Hydrodynamic-Modeling',
