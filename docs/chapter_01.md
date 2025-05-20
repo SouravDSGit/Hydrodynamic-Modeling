@@ -65,12 +65,12 @@ grpah LR
 
     B -->|Examples| B1[Levees, Dams, Channels]
     C -->|Examples| C1[Zoning, Warning Systems, Insurance]
-    D -->|Combines| D1[Structural + Non-structural + Ecosystem-based]
+    D -->|Combines| D1["Structural + Non-structural + Ecosystem-based"]
     E -->|Features| E1[Flexible & Adjustable Strategies]
 
     B1 -->|Focus| F1[Control Water]
     C1 -->|Focus| F2[Adapt to Flooding]
-    D1 -->|Focus| F3[Balance Protection & Adaptation]
+    D1 -->|Focus| F3["Balance Protection & Adaptation"]
     E1 -->|Focus| F4[Respond to Changing Conditions]
 
     F1 --> G[Time]
